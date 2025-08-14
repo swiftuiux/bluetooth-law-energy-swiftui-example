@@ -95,8 +95,5 @@ struct ContentView: View {
         .alert(isPresented: $showAlert) {
             alertView(isAuthorized) // Alert view
         }
-        .onDisappear{
-            manager.beforeDeinit()
-        }
     }
 }
