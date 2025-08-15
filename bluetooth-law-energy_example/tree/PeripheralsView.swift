@@ -47,6 +47,7 @@ struct PeripheralsView: View {
     }
     
     /// Fetches the list of Bluetooth peripherals.
+    @MainActor
     private func fetchPeripherals() async {
         for await cbPeripherals in await manager.peripheralsStream {
             /// Filter out peripherals with duplicate IDs and nil names.
